@@ -1,2 +1,0 @@
-# Kamcoder
-Showing my projects 
