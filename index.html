@@ -49,6 +49,11 @@ nav ul li a {
     font-size: 28px;
     cursor: pointer;
 }
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+}
 
 /* HERO */
 .hero {
@@ -69,6 +74,14 @@ nav ul li a {
 
 .overlay h2 {
     font-size: 40px;
+}
+img{
+    border-radius: 20px;
+    border: 2px solid white;
+    left: 20px;
+    margin: 10px;
+    padding: 10px;
+
 }
 
 .overlay button {
@@ -176,7 +189,10 @@ footer {
 
 <header>
     <nav>
-        <h1>KAMCODER</h1>
+        <div class ="logo">
+            <img src="khuzaifah.jpg" alt="Logo" style="width: 50px; height: 50px; border-radius: 50%;">
+        <h1>KAMCODER</h1> 
+    </div>
 
         <div class="menu-toggle" id="menu-toggle">
             ☰
@@ -186,15 +202,16 @@ footer {
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="registration.html">Contact</a></li>
         </ul>
     </nav>
 </header>
 
 <section class="hero">
     <div class="overlay">
-        <h2>Hello, I'm KAMCODER</h2>
-        <p>Professional Engineer | Web Developer</p>
+        <h2>Hello, I'm AINE MBABAZI KHUZAIFAH</h2>
+        <p>Pursuing Diploma in Software Engineering</p>
+        <p>Professional Engineer | Software Developer</p>
         <button>View My Work</button>
     </div>
 </section>
