@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAMCODER Registration</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            width: 320px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #2a5298;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #2a5298;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1e3c72;
+        }
+
+        .toggle {
+            cursor: pointer;
+            font-size: 12px;
+            color: #2a5298;
+        }
+
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+
+        .success {
+            color: green;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>KAMCODER Registration</h2>
+
+    <form id="registerForm">
+        <input type="text" id="username" placeholder="Username">
+        <div class="error" id="userError"></div>
+
+        <input type="email" id="email" placeholder="Email">
+        <div class="error" id="emailError"></div>
+
+        <input type="password" id="password" placeholder="Password">
+        <span class="toggle" onclick="togglePassword('password')">Show Password</span>
+        <div class="error" id="passError"></div>
+
+        <input type="password" id="confirmPassword" placeholder="Confirm Password">
+        <span class="toggle" onclick="togglePassword('confirmPassword')">Show Password</span>
+        <div class="error" id="confirmError"></div>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <div class="success" id="successMsg"></div>
+</div>
+
+<script>
+    function togglePassword(id) {
+        let field = document.getElementById(id);
+        field.type = field.type === "password" ? "text" : "password";
+    }
+
+    document.getElementById("registerForm").addEventListener("4submit", function(e) {
+        e.preventDefault();
+
+        let username = document.getElementById("username").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let password = document.getElementById("password").value;
+        let confirmPassword = document.getElementById("confirmPassword").value;
+
+        let valid = true;
+
+        // Clear previous errors
+        document.getElementById("userError").innerText = "";
+        document.getElementById("emailError").innerText = "";
+        document.getElementById("passError").innerText = "";
+        document.getElementById("confirmError").innerText = "";
+        document.getElementById("successMsg").innerText = "";
+
+        // Username validation
+        if (username === "") {
+            document.getElementById("userError").innerText = "Username is required";
+            valid = false;
+        }
+
+        // Email validation
+        if (email === "" || !email.includes("@")) {
+            document.getElementById("emailError").innerText = "Valid email required";
+            valid = false;
+        }
+
+        // Password validation
+        if (password.length < 6) {
+            document.getElementById("passError").innerText = "Password must be at least 6 characters";
+            valid = false;
+        }
+
+        // Confirm password
+        if (password !== confirmPassword) {
+            document.getElementById("confirmError").innerText = "Passwords do not match";
+            valid = false;
+        }
+
+        // Success
+        if (valid) {
+            document.getElementById("successMsg").innerText = "Registration Successful!";
+        }
+    });
+</script>
+
+</body>
+</html>
