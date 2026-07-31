@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Dashboard | DEVSPHERE LMS</title>
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+
+<link rel="stylesheet" href="dashboard.css">
+
+
+</head>
+
+
+<body>
+
+
+
+<!-- Mobile Menu Button -->
+
+<div class="menu-btn">
+
+<i class="fas fa-bars"></i>
+
+</div>
+
+
+
+
+
+<!-- Sidebar -->
+
+
+<aside class="sidebar">
+
+
+<div class="brand">
+
+<i class="fas fa-book-open-reader"></i>
+
+<h2>
+DEVSPHERE
+</h2>
+
+
+</div>
+
+
+
+
+<div class="profile">
+
+
+<img src="lms.jpg">
+
+
+<h3>
+Student Name
+</h3>
+
+
+<p>
+UICT/2026/0001
+</p>
+
+
+</div>
+
+
+
+
+
+<nav>
+
+
+<a class="active" href="dashboard.html">
+
+<i class="fas fa-home"></i>
+
+Dashboard
+
+</a>
+
+
+
+<a href="book.html">
+
+<i class="fas fa-book"></i>
+
+Books
+
+</a>
+
+
+
+<a href="borrow.html">
+
+<i class="fas fa-hand-holding"></i>
+
+Borrow Books
+
+</a>
+
+
+
+
+<a href="reports.html">
+
+<i class="fas fa-book-reader"></i>
+
+Reports & Analysis
+
+</a>
+
+
+
+<a href="return.html">
+
+<i class="fas fa-rotate-left"></i>
+
+Return Books
+
+</a>
+
+
+
+
+<a href="fines.html">
+
+<i class="fas fa-money-bill"></i>
+
+Fines
+
+</a>
+
+
+
+
+<a href="notifications.html">
+
+<i class="fas fa-bell"></i>
+
+Notifications
+
+</a>
+
+
+
+
+
+
+
+<a href="login.html">
+
+<i class="fas fa-sign-out"></i>
+
+Logout
+
+</a>
+
+
+
+</nav>
+
+
+
+</aside>
+
+
+
+
+
+
+<!-- Main Content -->
+
+
+<main class="main">
+
+
+
+<header>
+
+
+<div>
+
+
+<h1>
+Welcome Back, Student 👋
+</h1>
+
+
+<p>
+Manage your library activities easily.
+</p>
+
+
+</div>
+
+
+
+<div class="search">
+
+
+<i class="fas fa-search"></i>
+
+
+<input 
+type="text"
+placeholder="Search books...">
+
+
+</div>
+
+
+</header>
+
+
+
+
+
+
+
+<!-- Statistics -->
+
+
+<section class="cards">
+
+
+<div class="card">
+
+
+<i class="fas fa-book"></i>
+
+
+<div>
+
+<h3>
+1200
+</h3>
+
+
+<p>
+Available Books
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<i class="fas fa-book-reader"></i>
+
+
+<div>
+
+<h3>
+5
+</h3>
+
+
+<p>
+Borrowed Books
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<i class="fas fa-clock"></i>
+
+
+<div>
+
+<h3>
+2
+</h3>
+
+
+<p>
+Pending Requests
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<i class="fas fa-money-bill-wave"></i>
+
+
+<div>
+
+<h3>
+UGX 0
+</h3>
+
+
+<p>
+Fines
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<div class="dashboard-grid">
+
+
+
+
+
+<!-- Recent Activities -->
+
+
+<section class="panel">
+
+
+<h2>
+Recent Activities
+</h2>
+
+
+
+<div class="activity">
+
+
+<i class="fas fa-check"></i>
+
+
+<p>
+Borrowed Python Programming Book
+</p>
+
+
+<span>
+Today
+</span>
+
+
+</div>
+
+<div class="activity">
+
+<i class="fas fa-rotate-left"></i>
+
+<p>
+Returned Database Systems
+</p>
+
+
+<span>
+Yesterday
+</span>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- Notifications -->
+
+
+<section class="panel">
+
+
+<h2>
+Notifications
+</h2>
+
+
+
+<div class="notification">
+
+
+<i class="fas fa-bell"></i>
+
+
+<p>
+Your borrowed book is due tomorrow.
+</p>
+
+
+</div>
+
+
+
+<div class="notification">
+
+
+<i class="fas fa-book"></i>
+
+
+<p>
+New books added to library.
+</p>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- Recommended Books -->
+
+
+<section class="books">
+
+
+<h2>
+Recommended Books
+</h2>
+
+
+
+<div class="book-container">
+
+
+
+<div class="book-card">
+
+
+<i class="fas fa-book"></i>
+
+
+<h3>
+Python Programming
+</h3>
+
+
+<p>
+Available
+</p>
+
+
+<button>
+View
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="book-card">
+
+
+<i class="fas fa-book"></i>
+
+
+<h3>
+Database Systems
+</h3>
+
+
+<p>
+Available
+</p>
+
+
+<button>
+View
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="book-card">
+
+
+<i class="fas fa-book"></i>
+
+
+<h3>
+Web Development
+</h3>
+
+
+<p>
+Available
+</p>
+
+
+<button>
+View
+</button>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+<script src="dashboard.js"></script>
+
+
+</body>
+
+</html>

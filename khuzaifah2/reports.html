@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reports - LMS</title>
+<style>
+    :root { --primary: #2c3e50;
+         --secondary: #3498db; 
+         --bg: #ecf0f1;
+          --white: #fff; 
+          --success: #27ae60;
+           --info: #3498db;
+            --warning: #f39c12; 
+            --border: #ddd; 
+        }
+
+        .navbar-brand{
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    font-style: monospace;
+    text-decoration: none;
+    padding-bottom: 40px;
+}
+img{
+  height: 120px;
+  width: 190px;
+  border-radius: 10px;
+  border: 2px solid white;
+
+}
+    * { margin: 0;
+         padding: 0;
+          box-sizing:
+           border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+         }
+    body { background: var(--bg); 
+        display: flex;
+         min-height: 100vh;
+         }
+    .sidebar {
+         width: 240px;
+         background: var(--primary);
+         color: var(--white);
+          position: fixed; 
+          height: 100%; 
+        
+        }
+    .sidebar h2 {
+         padding: 20px; 
+        text-align: center; 
+        border-bottom: 1px solid #3d566e;
+     }
+    .sidebar a {
+         display: block;
+          padding: 14px 20px;
+           color: var(--white);
+            text-decoration: none;
+         }
+    .sidebar a:hover, .sidebar a.active {
+         background: #34495e; 
+         border-left: 3px solid var(--secondary);
+         }
+    .main { 
+        margin-left: 240px; 
+        width: calc(100% - 240px);
+     }
+    .navbar {
+         background: var(--white);
+          padding: 12px 20px; 
+          box-shadow: 0 2px 4px rgba(0,0,0,0.08); 
+          position: sticky;
+           top: 0;
+         }
+    .content { 
+        padding: 25px; 
+    }
+    .stats { 
+        display: grid;
+         grid-template-columns: repeat(4, 1fr);
+          gap: 20px; 
+          margin-bottom: 25px; 
+        }
+    .stat-card {
+         background: var(--white);
+          padding: 20px;
+           border-radius: 8px; 
+           text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
+        }
+    .stat-card h4 { 
+        color: #777; 
+        font-size: 14px;
+         margin-bottom: 8px;
+         }
+    .stat-card h2 {
+         font-size: 28px; 
+        }
+    .card {
+         background: var(--white); 
+         padding: 20px; 
+         border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
+          margin-bottom: 20px; 
+        }
+    table { 
+        width: 100%; 
+        border-collapse: collapse; 
+    }
+    th, td { 
+        padding: 12px 15px; 
+        text-align: left; 
+        border-bottom: 1px solid var(--border);
+     }
+    th {
+         background: var(--secondary); 
+         color: var(--white); 
+        }
+    .footer { 
+        background: var(--primary); 
+        color: var(--white); 
+        text-align: center; 
+        padding: 15px; 
+        margin-top: 30px;
+     }
+    @media(max-width: 1000px){
+         .stats{
+            grid-template-columns: repeat(2, 1fr);
+        } }
+    @media(max-width: 600px){ 
+        .stats{grid-template-columns: 1fr;
+        } 
+        .main{
+            margin-left:0;
+            width:100%;
+        } 
+        .sidebar{
+            display:none;
+        } }
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+    <img src="devslogo.jpg" alt="DEVSPHERE LOGO">
+  
+    <a class="navbar-brand" href="#"> DevSphere </a>
+    <h2>LMS</h2>
+    <a href="index.html">Dashboard</a>
+    <a href="book.html">Book Management</a>
+    <a href="students.html">Student Management</a>
+    <a href="borrow.html">Borrow Book</a>
+    <a href="return.html">Return Book</a>
+    <a href="reports.html" class="active">Reports</a>
+</div>
+
+<div class="main">
+    <div class="navbar"><h2>Reports & Analytics</h2></div>
+
+    <div class="content">
+        <!-- Stats Cards -->
+        <div class="stats">
+            <div class="stat-card"><h4>Total Books</h4><h2 style="color:var(--info)">1,240</h2></div>
+            <div class="stat-card"><h4>Total Students</h4><h2 style="color:var(--success)">480</h2></div>
+            <div class="stat-card"><h4>Books Borrowed</h4><h2 style="color:var(--warning)">65</h2></div>
+            <div class="stat-card"><h4>Overdue Books</h4><h2 style="color:var(--primary)">8</h2></div>
+        </div>
+
+        <!-- Most Borrowed Books -->
+        <div class="card">
+            <h3>Most Borrowed Books This Month</h3>
+            <table>
+                <thead><tr><th>Rank</th><th>Book Title</th><th>Author</th><th>Times Borrowed</th></tr></thead>
+                <tbody>
+                    <tr><td>1</td><td>Clean Code</td><td>Robert Martin</td><td>22</td></tr>
+                    <tr><td>2</td><td>Database Systems</td><td>C.J. Date</td><td>18</td></tr>
+                    <tr><td>3</td><td>Introduction to Algorithms</td><td>CLRS</td><td>15</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Overdue Report -->
+        <div class="card">
+            <h3>Overdue Books Report</h3>
+            <table>
+                <thead><tr><th>Student</th><th>Book</th><th>Due Date</th><th>Days Overdue</th></tr></thead>
+                <tbody>
+                    <tr><td>John Doe</td><td>Clean Code</td><td>2026-07-04</td><td>12</td></tr>
+                    <tr><td>Mike Lee</td><td>Python Basics</td><td>2026-07-01</td><td>15</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer">© 2026 Devsphere Library Management System</div>
+    </div>
+</div>
+
+</body>
+</html>
