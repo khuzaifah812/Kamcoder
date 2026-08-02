@@ -3,199 +3,215 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Reports - LMS</title>
+<title>Reports | DEVSPHERE LMS</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dashboard.css"> <!-- use same css as other pages -->
 <style>
-    :root { --primary: #2c3e50;
-         --secondary: #3498db; 
-         --bg: #ecf0f1;
-          --white: #fff; 
-          --success: #27ae60;
-           --info: #3498db;
-            --warning: #f39c12; 
-            --border: #ddd; 
-        }
-
-        .navbar-brand{
-    color: white;
-    font-weight: bold;
-    font-size: 40px;
-    font-style: monospace;
-    text-decoration: none;
-    padding-bottom: 40px;
-}
-img{
-  height: 120px;
-  width: 190px;
-  border-radius: 10px;
-  border: 2px solid white;
-
-}
-    * { margin: 0;
-         padding: 0;
-          box-sizing:
-           border-box;
-            font-family: 'Segoe UI', Arial, sans-serif;
-         }
-    body { background: var(--bg); 
-        display: flex;
-         min-height: 100vh;
-         }
-    .sidebar {
-         width: 240px;
-         background: var(--primary);
-         color: var(--white);
-          position: fixed; 
-          height: 100%; 
-        
-        }
-    .sidebar h2 {
-         padding: 20px; 
-        text-align: center; 
-        border-bottom: 1px solid #3d566e;
-     }
-    .sidebar a {
-         display: block;
-          padding: 14px 20px;
-           color: var(--white);
-            text-decoration: none;
-         }
-    .sidebar a:hover, .sidebar a.active {
-         background: #34495e; 
-         border-left: 3px solid var(--secondary);
-         }
-    .main { 
-        margin-left: 240px; 
-        width: calc(100% - 240px);
-     }
-    .navbar {
-         background: var(--white);
-          padding: 12px 20px; 
-          box-shadow: 0 2px 4px rgba(0,0,0,0.08); 
-          position: sticky;
-           top: 0;
-         }
-    .content { 
-        padding: 25px; 
-    }
-    .stats { 
-        display: grid;
-         grid-template-columns: repeat(4, 1fr);
-          gap: 20px; 
-          margin-bottom: 25px; 
-        }
-    .stat-card {
-         background: var(--white);
-          padding: 20px;
-           border-radius: 8px; 
-           text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
-        }
-    .stat-card h4 { 
-        color: #777; 
-        font-size: 14px;
-         margin-bottom: 8px;
-         }
-    .stat-card h2 {
-         font-size: 28px; 
-        }
-    .card {
-         background: var(--white); 
-         padding: 20px; 
-         border-radius: 8px;
-          box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
-          margin-bottom: 20px; 
-        }
-    table { 
-        width: 100%; 
-        border-collapse: collapse; 
-    }
-    th, td { 
-        padding: 12px 15px; 
-        text-align: left; 
-        border-bottom: 1px solid var(--border);
-     }
-    th {
-         background: var(--secondary); 
-         color: var(--white); 
-        }
-    .footer { 
-        background: var(--primary); 
-        color: var(--white); 
-        text-align: center; 
-        padding: 15px; 
-        margin-top: 30px;
-     }
-    @media(max-width: 1000px){
-         .stats{
-            grid-template-columns: repeat(2, 1fr);
-        } }
-    @media(max-width: 600px){ 
-        .stats{grid-template-columns: 1fr;
-        } 
-        .main{
-            margin-left:0;
-            width:100%;
-        } 
-        .sidebar{
-            display:none;
-        } }
+   .report-section { background: #fff; padding: 25px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+   .report-section h3 { margin-bottom: 15px; font-size: 18px; font-weight: 600; }
+   .table { width: 100%; border-collapse: collapse; }
+   .table th,.table td { padding: 14px; text-align: left; border-bottom: 1px solid #eee; }
+   .table thead { background: #0066ff; color: white; }
+   .badge-overdue { background: #dc3545; color: white; padding: 5px 10px; border-radius: 20px; font-size: 12px; }
+   .stat-card i { font-size: 28px; }
 </style>
 </head>
 <body>
 
-<div class="sidebar">
-    <img src="devslogo.jpg" alt="DEVSPHERE LOGO">
-  
-    <a class="navbar-brand" href="#"> DevSphere </a>
-    <h2>LMS</h2>
-    <a href="index.html">Dashboard</a>
-    <a href="book.html">Book Management</a>
-    <a href="students.html">Student Management</a>
-    <a href="borrow.html">Borrow Book</a>
-    <a href="return.html">Return Book</a>
-    <a href="reports.html" class="active">Reports</a>
-</div>
+<!-- Mobile Menu Button -->
+<div class="menu-btn"><i class="fas fa-bars"></i></div>
 
-<div class="main">
-    <div class="navbar"><h2>Reports & Analytics</h2></div>
-
-    <div class="content">
-        <!-- Stats Cards -->
-        <div class="stats">
-            <div class="stat-card"><h4>Total Books</h4><h2 style="color:var(--info)">1,240</h2></div>
-            <div class="stat-card"><h4>Total Students</h4><h2 style="color:var(--success)">480</h2></div>
-            <div class="stat-card"><h4>Books Borrowed</h4><h2 style="color:var(--warning)">65</h2></div>
-            <div class="stat-card"><h4>Overdue Books</h4><h2 style="color:var(--primary)">8</h2></div>
-        </div>
-
-        <!-- Most Borrowed Books -->
-        <div class="card">
-            <h3>Most Borrowed Books This Month</h3>
-            <table>
-                <thead><tr><th>Rank</th><th>Book Title</th><th>Author</th><th>Times Borrowed</th></tr></thead>
-                <tbody>
-                    <tr><td>1</td><td>Clean Code</td><td>Robert Martin</td><td>22</td></tr>
-                    <tr><td>2</td><td>Database Systems</td><td>C.J. Date</td><td>18</td></tr>
-                    <tr><td>3</td><td>Introduction to Algorithms</td><td>CLRS</td><td>15</td></tr>
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Overdue Report -->
-        <div class="card">
-            <h3>Overdue Books Report</h3>
-            <table>
-                <thead><tr><th>Student</th><th>Book</th><th>Due Date</th><th>Days Overdue</th></tr></thead>
-                <tbody>
-                    <tr><td>John Doe</td><td>Clean Code</td><td>2026-07-04</td><td>12</td></tr>
-                    <tr><td>Mike Lee</td><td>Python Basics</td><td>2026-07-01</td><td>15</td></tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="footer">© 2026 Devsphere Library Management System</div>
+<!-- Sidebar - SAME AS ALL OTHER PAGES -->
+<aside class="sidebar">
+    <div class="brand">
+        <i class="fas fa-book-open-reader"></i>
+        <h2>DEVSPHERE</h2>
     </div>
-</div>
 
+    <div class="profile">
+        <img src="lms.jpg" alt="Profile">
+        <h3 id="profileName">Admin</h3>
+        <p id="profileReg">ADMIN</p>
+        <p id="profileCourse" style="font-size:12px; color:#cce0ff;">Library Admin</p>
+    </div>
+
+    <nav>
+        <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="book.html"><i class="fas fa-book"></i> Book Management</a>
+        <a href="borrow.html"><i class="fas fa-hand-holding"></i> Borrow Books</a>
+        <a href="return.html"><i class="fas fa-rotate-left"></i> Return Books</a>
+        <a href="fines.html"><i class="fas fa-money-bill"></i> Fines</a>
+        <a class="active" href="reports.html"><i class="fas fa-chart-bar"></i> Reports</a>
+        <a href="notifications.html"><i class="fas fa-bell"></i> Notifications</a>
+           <a href="admin.html">
+                <i class="fa-solid fa-unlock-keyhole"></i> Admin
+            </a>
+        <a href="login.html" id="logoutBtn"><i class="fas fa-sign-out"></i> Logout</a>
+    </nav>
+</aside>
+
+<!-- Main Content -->
+<main class="main">
+    <header>
+        <div>
+            <h1>Reports & Analytics 📊</h1>
+            <p>Live overview of your library</p>
+        </div>
+    </header>
+
+    <!-- Stats Cards - LIVE -->
+    <section class="cards">
+        <div class="card">
+            <i class="fas fa-book" style="color:#0066ff"></i>
+            <div>
+                <h3 id="totalBooks">0</h3>
+                <p>Total Books</p>
+            </div>
+        </div>
+        <div class="card">
+            <i class="fas fa-users" style="color:#198754"></i>
+            <div>
+                <h3 id="totalStudents">0</h3>
+                <p>Total Students</p>
+            </div>
+        </div>
+        <div class="card">
+            <i class="fas fa-hand-holding" style="color:#ffc107"></i>
+            <div>
+                <h3 id="booksBorrowed">0</h3>
+                <p>Books Borrowed</p>
+            </div>
+        </div>
+        <div class="card">
+            <i class="fas fa-triangle-exclamation" style="color:#dc3545"></i>
+            <div>
+                <h3 id="overdueBooks">0</h3>
+                <p>Overdue Books</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Most Borrowed Books -->
+    <section class="report-section">
+        <h3>Most Borrowed Books</h3>
+        <div class="table-responsive">
+            <table class="table">
+                <thead><tr><th>Rank</th><th>Book Title</th><th>Author</th><th>Times Borrowed</th></tr></thead>
+                <tbody id="mostBorrowedBody"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Overdue Report -->
+    <section class="report-section">
+        <h3>Overdue Books Report</h3>
+        <div class="table-responsive">
+            <table class="table">
+                <thead><tr><th>Student RegNo</th><th>Book Title</th><th>Due Date</th><th>Days Overdue</th><th>Fine</th></tr></thead>
+                <tbody id="overdueBody"></tbody>
+            </table>
+        </div>
+        <p id="noOverdue" style="text-align:center; padding:20px; color:#777; display:none;">No overdue books 🎉</p>
+    </section>
+
+</main>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const FINE_RATE = 1000;
+
+    let books = JSON.parse(localStorage.getItem("libraryBooks")) || [];
+    let borrowed = JSON.parse(localStorage.getItem("borrowedBooks")) || [];
+    let students = JSON.parse(localStorage.getItem("students")) || [];
+
+    // 1. UPDATE STATS CARDS
+    function updateStats(){
+        document.getElementById("totalBooks").innerText = books.reduce((a,b) => a + b.copies, 0);
+        document.getElementById("totalStudents").innerText = students.length;
+        document.getElementById("booksBorrowed").innerText = borrowed.length;
+
+        let today = new Date();
+        let overdue = borrowed.filter(b => today > new Date(b.dueDate)).length;
+        document.getElementById("overdueBooks").innerText = overdue;
+    }
+
+    // 2. MOST BORROWED BOOKS
+    function renderMostBorrowed(){
+        // count how many times each bookId appears in borrowed history
+        let count = {};
+        borrowed.forEach(b => {
+            count[b.bookId] = (count[b.bookId] || 0) + 1;
+        });
+
+        let sorted = Object.entries(count).sort((a,b) => b[1] - a[1]).slice(0,5);
+        let tbody = document.getElementById("mostBorrowedBody");
+        tbody.innerHTML = "";
+
+        sorted.forEach(([bookId, times], i) => {
+            let book = books.find(b => b.id === bookId);
+            if(book){
+                tbody.innerHTML += `
+                    <tr>
+                        <td>${i+1}</td>
+                        <td>${book.title}</td>
+                        <td>${book.author}</td>
+                        <td>${times}</td>
+                    </tr>
+                `;
+            }
+        });
+
+        if(sorted.length === 0) tbody.innerHTML = `<tr><td colspan="4" style="text-align:center">No borrowing data yet</td></tr>`;
+    }
+
+    // 3. OVERDUE REPORT
+    function renderOverdue(){
+        let today = new Date();
+        today.setHours(0,0,0,0);
+        let tbody = document.getElementById("overdueBody");
+        tbody.innerHTML = "";
+        let hasOverdue = false;
+
+        borrowed.forEach(b => {
+            let due = new Date(b.dueDate);
+            due.setHours(0,0,0,0);
+            let diffDays = Math.floor((today - due) / (1000*60*60*24));
+
+            if(diffDays > 0){
+                hasOverdue = true;
+                tbody.innerHTML += `
+                    <tr>
+                        <td>${b.regno}</td>
+                        <td>${b.title}</td>
+                        <td>${b.dueDate}</td>
+                        <td><span class="badge-overdue">${diffDays} days</span></td>
+                        <td>UGX ${diffDays * FINE_RATE}</td>
+                    </tr>
+                `;
+            }
+        });
+
+        document.getElementById("noOverdue").style.display = hasOverdue? "none" : "block";
+    }
+
+    // 4. AUTO REFRESH WHEN OTHER TABS CHANGE DATA
+    window.addEventListener('storage', () => {
+        books = JSON.parse(localStorage.getItem("libraryBooks")) || [];
+        borrowed = JSON.parse(localStorage.getItem("borrowedBooks")) || [];
+        students = JSON.parse(localStorage.getItem("students")) || [];
+        updateStats();
+        renderMostBorrowed();
+        renderOverdue();
+    });
+
+    // Initial load
+    updateStats();
+    renderMostBorrowed();
+    renderOverdue();
+});
+</script>
+<script src="dashboard.js"></script> <!-- for sidebar + logout -->
 </body>
 </html>
