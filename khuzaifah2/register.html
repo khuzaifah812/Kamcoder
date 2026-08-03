@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | DEVSPHERE LMS</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="circle c1"></div>
+        <div class="circle c2"></div>
+    </div>
+
+    <div class="register-container">
+        <form class="register-box" id="registerForm">
+
+            <div class="logo">
+                <i class="fas fa-user-plus"></i>
+            </div>
+
+            <h2>Create Account</h2>
+            <p>Join DEVSPHERE Library System</p>
+
+            <div class="row">
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <div class="input-box">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Enter full name" id="fullname" required> <!-- CHANGED: id="name" to "fullname" -->
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Registration Number</label>
+                    <div class="input-box">
+                        <i class="fas fa-id-card"></i>
+                        <input type="text" placeholder="UICT/2026/0001" id="regno" required> <!-- CHANGED: example to 3 digits -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-group">
+                    <label>Email</label>
+                    <div class="input-box">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" placeholder="example@gmail.com" id="email" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Phone Number</label>
+                    <div class="input-box">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" placeholder="0789958889" id="phone" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Course</label>
+                <div class="input-box">
+                    <i class="fas fa-graduation-cap"></i>
+                    <select id="course" required> <!-- ADDED: id="course" -->
+                        <option value="">Select Course</option>
+                        <option value="Diploma in Software Engineering">Diploma in Software Engineering</option>
+                        <option value="Diploma in ICT">Diploma in ICT</option>
+                        <option value="Diploma in Electrical Engineering">Diploma in Electrical Engineering</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-group">
+                    <label>Password</label>
+                    <div class="input-box">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Password" id="password" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Confirm Password</label>
+                    <div class="input-box">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Confirm Password" id="confirmPassword" required>
+                    </div>
+                </div>
+            </div>
+
+            <button class="register-btn" type="submit">Register</button> <!-- ADDED: type="submit" -->
+
+            <p class="login-link">
+                Already have an account? <a href="login.html">Login</a>
+            </p>
+
+            <a href="landingpage.html" class="back">
+                <i class="fas fa-arrow-left"></i> Back Home
+            </a>
+
+        </form>
+    </div>
+
+    <script src="register.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrow Books | DEVSPHERE LMS</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css"> <!-- reuse same css -->
+    <link rel="stylesheet" href="borrow.css"> <!-- extra styles -->
+</head>
+
+<body>
+
+    <!-- Mobile Menu Button -->
+    <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="brand">
+            <i class="fas fa-book-open-reader"></i>
+            <h2>DEVSPHERE</h2>
+        </div>
+
+        <div class="profile">
+            <img src="lms.jpg" alt="Profile">
+            <h3 id="profileName">Student Name</h3>
+            <p id="profileReg">UICT/2025/0001</p>
+            <p id="profileCourse" style="font-size:12px; color:#cce0ff;"></p>
+        </div>
+
+        <nav>
+            <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+            <a href="book.html"><i class="fas fa-book"></i> Books</a>
+            <a class="active" href="borrow.html"><i class="fas fa-hand-holding"></i> Borrow Books</a>
+            <a href="reports.html"><i class="fas fa-book-reader"></i> Reports & Analysis</a>
+            <a href="return.html"><i class="fas fa-rotate-left"></i> Return Books</a>
+            <a href="fines.html"><i class="fas fa-money-bill"></i> Fines</a>
+            <a href="notifications.html"><i class="fas fa-bell"></i> Notifications</a>
+               <a href="admin.html">
+                <i class="fa-solid fa-unlock-keyhole"></i> Admin
+            </a>
+            <a href="login.html" id="logoutBtn"><i class="fas fa-sign-out"></i> Logout</a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+        <header>
+            <div>
+                <h1 id="welcomeHeading">Borrow Books 📚</h1>
+                <p>Select books available to borrow.</p>
+            </div>
+
+            <div class="search">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchBooks" placeholder="Search books...">
+            </div>
+        </header>
+
+        <!-- Borrow Stats -->
+        <section class="cards">
+            <div class="card">
+                <i class="fas fa-book"></i>
+                <div>
+                    <h3 id="availableCount">0</h3>
+                    <p>Available Books</p>
+                </div>
+            </div>
+            <div class="card">
+                <i class="fas fa-book-reader"></i>
+                <div>
+                    <h3 id="borrowedCount">0</h3>
+                    <p>Borrowed Books</p>
+                </div>
+            </div>
+            <div class="card">
+                <i class="fas fa-clock"></i>
+                <div>
+                    <h3 id="pendingCount">0</h3>
+                    <p>Pending Requests</p>
+                </div>
+            </div>
+            <div class="card">
+                <i class="fas fa-money-bill-wave"></i>
+                <div>
+                    <h3 id="fineAmount">UGX 0</h3>
+                    <p>Fines</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Books Grid -->
+        <section class="borrow-section">
+            <h2>Available Books</h2>
+            <div class="book-grid" id="bookGrid">
+                <!-- Books will load here with JS -->
+            </div>
+        </section>
+
+        <!-- Toast -->
+        <div id="toast"></div>
+
+    </main>
+
+    <script src="borrow.js"></script>
+    <script src="dashboard.js"></script> <!-- reuse profile/greeting/logout logic -->
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel | DEVSPHERE LMS</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dashboard.css"> 
+<style>
+   .admin-section { background: #fff; padding: 25px; border-radius: 12px; margin-top: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+   .table { width: 100%; border-collapse: collapse; }
+   .table th,.table td { padding: 14px; text-align: left; border-bottom: 1px solid #eee; }
+   .table thead { background: #0066ff; color: white; }
+   .logout-admin { padding: 10px 16px; background: #dc3545; color: white; border: none; border-radius: 6px; cursor: pointer; }
+</style>
+</head>
+<body>
+
+<!-- Mobile Menu Button -->
+<div class="menu-btn"><i class="fas fa-bars"></i></div>
+
+<!-- Sidebar -->
+<aside class="sidebar">
+    <div class="brand">
+        <i class="fas fa-book-open-reader"></i>
+        <h2>DEVSPHERE</h2>
+    </div>
+
+    <div class="profile">
+        <img src="lms.jpg" alt="Profile">
+        <h3>Admin</h3>
+        <p>khuzaifah</p>
+        <p style="font-size:12px; color:#cce0ff;">Library Admin</p>
+    </div>
+
+    <nav>
+        <a class="active" href="admin.html"><i class="fas fa-users"></i> Student Records</a>
+        <a href="reports.html"><i class="fas fa-chart-bar"></i> Reports</a>
+        <a href="book.html"><i class="fas fa-book"></i> Book Management</a>
+        <a href="#" id="adminLogout"><i class="fas fa-sign-out"></i> Logout</a>
+    </nav>
+</aside>
+
+<!-- Main Content -->
+<main class="main">
+    <header>
+        <div>
+            <h1>Admin Panel 👑</h1>
+            <p>View all registered students</p>
+        </div>
+        <button class="logout-admin" id="logoutBtnTop">Logout</button>
+    </header>
+
+    <section class="cards">
+        <div class="card">
+            <i class="fas fa-users" style="color:#0066ff"></i>
+            <div>
+                <h3 id="totalStudents">0</h3>
+                <p>Total Registered Students</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="admin-section">
+        <h3>All Student Signups</h3>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Registration No</th>
+                        <th>Full Name</th>
+                        <th>Course</th>
+                        <th>Date Registered</th>
+                    </tr>
+                </thead>
+                <tbody id="studentsTableBody"></tbody>
+            </table>
+        </div>
+        <p id="noStudents" style="text-align:center; padding:20px; color:#777; display:none;">No students registered yet</p>
+    </section>
+
+</main>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    
+    // 1. PROTECT PAGE
+    if(localStorage.getItem("isAdminLoggedIn") !== "true"){
+        window.location.href = "admin-login.html";
+    }
+
+    // 2. LOGOUT
+    function adminLogout(){
+        localStorage.removeItem("isAdminLoggedIn");
+        window.location.href = "admin-login.html";
+    }
+    document.getElementById("adminLogout").addEventListener("click", adminLogout);
+    document.getElementById("logoutBtnTop").addEventListener("click", adminLogout);
+
+    // 3. LOAD STUDENTS
+    function loadStudents(){
+        let students = JSON.parse(localStorage.getItem("students")) || [];
+        let tbody = document.getElementById("studentsTableBody");
+        tbody.innerHTML = "";
+
+        document.getElementById("totalStudents").innerText = students.length;
+
+        if(students.length === 0){
+            document.getElementById("noStudents").style.display = "block";
+        } else {
+            document.getElementById("noStudents").style.display = "none";
+        }
+
+        students.forEach((s, i) => {
+            tbody.innerHTML += `
+                <tr>
+                    <td>${i+1}</td>
+                    <td>${s.registration}</td>
+                    <td>${s.name}</td>
+                    <td>${s.course}</td>
+                    <td>${s.date || 'N/A'}</td>
+                </tr>
+            `;
+        });
+    }
+
+    loadStudents();
+});
+</script>
+<script src="dashboard.js"></script>
+</body>
+</html>

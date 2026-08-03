@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Login | DEVSPHERE LMS</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+    body{display:flex;justify-content:center;align-items:center;height:100vh;background:linear-gradient(135deg,#0066ff,#0047b3)}
+    .login-box{background:#fff;padding:40px;border-radius:12px;width:350px;box-shadow:0 10px 30px rgba(0,0,0,0.2)}
+    .login-box h2{text-align:center;margin-bottom:20px;color:#0066ff}
+    .input-group{margin-bottom:15px}
+    .input-group input{width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font-size:14px}
+    .login-btn{width:100%;padding:12px;background:#0066ff;color:#fff;border:none;border-radius:8px;font-weight:600;cursor:pointer}
+    .login-btn:hover{background:#0047b3}
+    .error{color:#dc3545;text-align:center;margin-top:10px;font-size:13px;display:none}
+</style>
+</head>
+<body>
+
+<div class="login-box">
+    <h2>Admin Login</h2>
+    <div class="input-group">
+        <input type="text" id="adminUser" placeholder="Admin Username">
+    </div>
+    <div class="input-group">
+        <input type="password" id="adminPass" placeholder="Admin Password">
+    </div>
+    <button class="login-btn" id="adminLoginBtn">Login</button>
+    <p class="error" id="errorMsg">Invalid Username or Password</p>
+</div>
+
+<script>
+document.getElementById("adminLoginBtn").addEventListener("click", () => {
+    let user = document.getElementById("adminUser").value.trim();
+    let pass = document.getElementById("adminPass").value.trim();
+
+    const ADMIN_USER = "khuzaifah";
+    const ADMIN_PASS = "khuzaifah1234";
+
+    if(user === ADMIN_USER && pass === ADMIN_PASS){
+        localStorage.setItem("isAdminLoggedIn", "true");
+        window.location.href = "admin.html";
+    } else {
+        document.getElementById("errorMsg").style.display = "block";
+    }
+});
+</script>
+
+</body>
+</html>
