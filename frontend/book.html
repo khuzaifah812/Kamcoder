@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Management | DEVSPHERE LMS</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dashboard.css"> <!-- Reuse dashboard css -->
+
+<style>
+/* Extra styles just for this page */
+.main { padding: 30px; }
+.page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; }
+.page-title { color: #0066ff; font-weight: 700; font-size: 28px; }
+
+.card { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin-bottom: 20px; }
+.search-box { max-width: 350px; padding: 10px 14px; border: 1px solid #ddd; border-radius: 8px; width: 100%; }
+
+.table { width: 100%; border-collapse: collapse; background: white; border-radius: 12px; overflow: hidden; }
+.table th, .table td { padding: 14px; text-align: left; border-bottom: 1px solid #eee; }
+.table thead { background: #0066ff; color: white; }
+.table tbody tr:hover { background: #f8f9ff; }
+
+.btn { padding: 10px 16px; border: none; border-radius: 8px; cursor: pointer; font-size: 14px; }
+.btn-primary { background: #0066ff; color: white; }
+.btn-primary:hover { background: #004bcc; }
+.btn-danger { background: #dc3545; color: white; padding: 6px 10px; }
+
+.badge { padding: 5px 10px; border-radius: 20px; font-size: 12px; color: white; font-weight: 500; }
+.badge-available { background: #198754; }
+.badge-borrowed { background: #dc3545; }
+
+/* Modal */
+.modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,.5); justify-content: center; align-items: center; z-index: 1000; }
+.modal.show { display: flex; }
+.modal-content { background: white; border-radius: 15px; width: 90%; max-width: 600px; overflow: hidden; }
+.modal-header { background: #0066ff; color: white; padding: 15px 20px; display: flex; justify-content: space-between; }
+.modal-body { padding: 20px; }
+.modal-footer { padding: 15px 20px; display: flex; justify-content: flex-end; gap: 10px; border-top: 1px solid #eee; }
+.form-control { width: 100%; padding: 10px 12px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 15px; }
+.row { display: flex; gap: 15px; }
+.col-md-6 { flex: 1; }
+</style>
+</head>
+<body>
+
+<!-- Mobile Menu Button -->
+<div class="menu-btn">
+    <i class="fas fa-bars"></i>
+</div>
+
+<!-- Sidebar - SAME AS DASHBOARD -->
+<aside class="sidebar">
+    <div class="brand">
+        <i class="fas fa-book-open-reader"></i>
+        <h2>DEVSPHERE</h2>
+    </div>
+
+    <div class="profile">
+        <img src="lms.jpg" alt="Profile">
+        <h3 id="profileName">Student Name</h3>
+        <p id="profileReg">UICT/2025/0001</p>
+        <p id="profileCourse" style="font-size:12px; color:#cce0ff;"></p>
+    </div>
+
+    <nav>
+        <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+        <a class="active" href="book.html"><i class="fas fa-book"></i> Book Management</a>
+        <a href="borrow.html"><i class="fas fa-hand-holding"></i> Borrow Books</a>
+        <a href="reports.html"><i class="fas fa-book-reader"></i> Reports & Analysis</a>
+        <a href="return.html"><i class="fas fa-rotate-left"></i> Return Books</a>
+        <a href="fines.html"><i class="fas fa-money-bill"></i> Fines</a>
+        <a href="notifications.html"><i class="fas fa-bell"></i> Notifications</a>
+           <a href="admin.html">
+                <i class="fa-solid fa-unlock-keyhole"></i> Admin
+            </a>
+        <a href="login.html" id="logoutBtn"><i class="fas fa-sign-out"></i> Logout</a>
+    </nav>
+</aside>
+
+<!-- Main Content -->
+<main class="main">
+    <header>
+        <div>
+            <h1 id="welcomeHeading">Book Management 📖</h1>
+            <p>Add, edit and delete library books.</p>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <h2 class="page-title">All Books</h2>
+        <button class="btn btn-primary" onclick="openModal()">+ Add Book</button>
+    </div>
+
+    <div class="card">
+        <input type="text" class="search-box" placeholder="Search books..." id="searchInput">
+    </div>
+
+    <div class="card">
+        <table class="table" id="bookTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Category</th>
+                    <th>Copies</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="bookTableBody"></tbody>
+        </table>
+    </div>
+</main>
+
+<!-- Modal -->
+<div class="modal" id="bookModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5>Add New Book</h5>
+            <button style="background:none;border:none;color:white;font-size:24px;cursor:pointer" onclick="closeModal()">×</button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-md-6"><label>Book ID</label><input type="text" class="form-control" id="bookID"></div>
+                <div class="col-md-6"><label>Title</label><input type="text" class="form-control" id="title"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-6"><label>Author</label><input type="text" class="form-control" id="author"></div>
+                <div class="col-md-6"><label>Category</label><input type="text" class="form-control" id="category"></div>
+            </div>
+            <label>Copies</label><input type="number" class="form-control" id="copies" value="1">
+        </div>
+        <div class="modal-footer">
+            <button class="btn" style="background:#6c757d;color:white" onclick="closeModal()">Close</button>
+            <button class="btn btn-primary" onclick="addBook()">Save Book</button>
+        </div>
+    </div>
+</div>
+
+<script src="api.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+    if (!requireLogin()) return;
+
+    let student;
+    try {
+        student = await Api.me();
+    } catch (err) {
+        Auth.clear();
+        window.location.href = "login.html";
+        return;
+    }
+
+    document.getElementById("profileName").innerText = student.fullname.toUpperCase();
+    document.getElementById("profileReg").innerText = student.registration;
+    document.getElementById("profileCourse").innerText = student.course;
+    document.getElementById("welcomeHeading").innerText = `Book Management \ud83d\udcd6`;
+
+    document.querySelector(".menu-btn").addEventListener("click", () => {
+        document.querySelector(".sidebar").classList.toggle("active");
+    });
+
+    document.getElementById("logoutBtn").addEventListener("click", (e) => {
+        e.preventDefault();
+        if (confirm("Are you sure you want to logout?")) {
+            Api.logout();
+            window.location.href = "login.html";
+        }
+    });
+
+    // Book Management Logic - now backed by the API instead of localStorage
+    const tableBody = document.querySelector("#bookTableBody");
+    const modal = document.getElementById("bookModal");
+
+    function openModal() { modal.classList.add("show"); }
+    function closeModal() { modal.classList.remove("show"); }
+    window.openModal = openModal;
+    window.closeModal = closeModal;
+
+    async function renderBooks(filter = "") {
+        let books;
+        try {
+            books = await Api.listBooks(filter);
+        } catch (err) {
+            alert(err.message || "Could not load books");
+            return;
+        }
+        tableBody.innerHTML = "";
+        books.forEach(book => {
+            let status = book.copies > 0
+                ? '<span class="badge badge-available">Available</span>'
+                : '<span class="badge badge-borrowed">Borrowed</span>';
+            tableBody.innerHTML += `
+                <tr>
+                    <td>${book.id}</td><td>${book.title}</td><td>${book.author}</td>
+                    <td>${book.category}</td><td>${book.copies}</td><td>${status}</td>
+                    <td><button class="btn btn-danger" onclick="deleteBook(\'${book.id}\')">\ud83d\uddd1\ufe0f</button></td>
+                </tr>`;
+        });
+    }
+
+    window.addBook = async function () {
+        let id = document.getElementById("bookID").value.trim();
+        let title = document.getElementById("title").value.trim();
+        if (id == "" || title == "") { alert("Please fill Book ID and Title."); return; }
+
+        try {
+            await Api.addBook({
+                id, title,
+                author: document.getElementById("author").value,
+                category: document.getElementById("category").value,
+                copies: parseInt(document.getElementById("copies").value) || 0,
+            });
+        } catch (err) {
+            alert(err.message || "Could not save book (are you logged in as admin?)");
+            return;
+        }
+
+        closeModal();
+        document.querySelectorAll("#bookModal input").forEach(input => input.value = "");
+        document.getElementById("copies").value = 1;
+        renderBooks();
+    };
+
+    window.deleteBook = async function (id) {
+        if (!confirm("Delete this book?")) return;
+        try {
+            await Api.deleteBook(id);
+            renderBooks();
+        } catch (err) {
+            alert(err.message || "Could not delete book (are you logged in as admin?)");
+        }
+    };
+
+    document.getElementById("searchInput").addEventListener("keyup", function () {
+        renderBooks(this.value);
+    });
+
+    window.onclick = (e) => { if (e.target == modal) closeModal(); };
+    renderBooks();
+});
+</script>
+</body>
+</html>

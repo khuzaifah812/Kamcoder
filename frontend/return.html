@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Books | DEVSPHERE LMS</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css"> <!-- reuse same css -->
+    <link rel="stylesheet" href="return.css"> <!-- extra styles -->
+</head>
+
+<body>
+
+    <!-- Mobile Menu Button -->
+    <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Sidebar - SAME AS DASHBOARD -->
+    <aside class="sidebar">
+        <div class="brand">
+            <i class="fas fa-book-open-reader"></i>
+            <h2>DEVSPHERE</h2>
+        </div>
+
+        <div class="profile">
+            <img src="lms.jpg" alt="Profile">
+            <h3 id="profileName">Student Name</h3>
+            <p id="profileReg">UICT/2025/0001</p>
+            <p id="profileCourse" style="font-size:12px; color:#cce0ff;"></p>
+        </div>
+
+        <nav>
+            <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+            <a href="book.html"><i class="fas fa-book"></i> Book Management</a>
+            <a href="borrow.html"><i class="fas fa-hand-holding"></i> Borrow Books</a>
+            <a class="active" href="return.html"><i class="fas fa-rotate-left"></i> Return Books</a>
+            <a href="fines.html"><i class="fas fa-money-bill"></i> Fines</a>
+            <a href="notifications.html"><i class="fas fa-bell"></i> Notifications</a>
+               <a href="admin.html">
+                <i class="fa-solid fa-unlock-keyhole"></i> Admin
+            </a>
+            <a href="login.html" id="logoutBtn"><i class="fas fa-sign-out"></i> Logout</a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+        <header>
+            <div>
+                <h1 id="welcomeHeading">Return Books 🔄</h1>
+                <p>Return books you have borrowed.</p>
+            </div>
+        </header>
+
+        <!-- Stats -->
+        <section class="cards">
+            <div class="card">
+                <i class="fas fa-book-reader"></i>
+                <div>
+                    <h3 id="borrowedCount">0</h3>
+                    <p>Books Borrowed</p>
+                </div>
+            </div>
+            <div class="card">
+                <i class="fas fa-clock"></i>
+                <div>
+                    <h3 id="overdueCount">0</h3>
+                    <p>Overdue Books</p>
+                </div>
+            </div>
+            <div class="card">
+                <i class="fas fa-money-bill-wave"></i>
+                <div>
+                    <h3 id="fineAmount">UGX 0</h3>
+                    <p>Total Fines</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Borrowed Books Table -->
+        <section class="return-section">
+            <h2>My Borrowed Books</h2>
+            <div class="table-responsive">
+                <table class="table" id="borrowedTable">
+                    <thead>
+                        <tr>
+                            <th>Book Title</th>
+                            <th>Borrow Date</th>
+                            <th>Due Date</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="borrowedTableBody">
+                        <!-- Filled by JS -->
+                    </tbody>
+                </table>
+            </div>
+            <p id="noBooksMsg" style="text-align:center; padding:20px; color:#777; display:none;">You have no borrowed books.</p>
+        </section>
+
+        <div id="toast"></div>
+
+    </main>
+
+    <script src="api.js"></script>
+    <script src="return.js"></script>
+    <script src="dashboard.js"></script> <!-- for sidebar profile/logout -->
+</body>
+</html>

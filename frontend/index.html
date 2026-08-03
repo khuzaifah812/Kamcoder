@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEVSPHERE Library Management System</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="landingpage.css">
+</head>
+<body>
+
+<!-- =================== PRELOADER =================== -->
+<div id="preloader">
+    <div class="loader"></div>
+</div>
+
+<!-- =================== HEADER =================== -->
+<header>
+    
+
+    <div class="logo">        
+        <span>DEVSPHERE LMS</span>
+    </div>
+
+    <nav id="navbar">
+
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a href="#how">How It Works</a>
+        <a href="#stats">Statistics</a>
+        <a href="#contact">Contact</a>
+
+        <button onclick="location.href='login.html'" class="login-btn">
+            Login
+        </button>
+
+    </nav>
+
+    <div class="menu-btn" id="menu-btn">
+        <i class="fas fa-bars"></i>
+    </div>
+
+</header>
+
+<!-- =================== HERO =================== -->
+
+<section class="hero" id="home">
+
+<div class="overlay"></div>
+
+<div class="hero-content">
+
+<h1>
+
+Modern Library Management System
+
+</h1>
+
+<p>
+
+Manage books, students, borrowing,
+returns, fines, reports and notifications
+from one powerful platform.
+
+</p>
+
+<div class="hero-buttons">
+
+<button class="primary-btn"
+onclick="location.href='register.html'">
+
+Get Started
+
+</button>
+
+<button class="secondary-btn">
+
+Learn More
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FEATURES ================= -->
+
+<section id="features">
+
+<h2>
+
+System Features
+
+</h2>
+
+<p class="section-title">
+
+Everything needed to automate
+library operations.
+
+</p>
+
+<div class="feature-grid">
+
+<div class="feature-card">
+
+<i class="fas fa-book"></i>
+
+<h3>Book Management</h3>
+
+<p>
+
+Add, edit and organize books.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fas fa-user-graduate"></i>
+
+<h3>Students</h3>
+
+<p>
+
+Manage student accounts.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fas fa-right-left"></i>
+
+<h3>Borrowing</h3>
+
+<p>
+
+Issue and receive books.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fas fa-coins"></i>
+
+<h3>Fine Calculator</h3>
+
+<p>
+
+Automatic overdue calculations.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fas fa-chart-line"></i>
+
+<h3>Reports</h3>
+
+<p>
+
+Generate reports instantly.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fas fa-bell"></i>
+
+<h3>Notifications</h3>
+
+<p>
+
+Automatic reminders.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+<div class="about-image">
+
+<img src="lms.jpg" alt="Library">
+
+</div>
+
+<div class="about-content">
+
+<h2>
+
+About DEVSPHERE LMS
+
+</h2>
+
+<p>
+
+DEVSPHERE Library Management System
+is designed to automate all library
+operations while providing speed,
+security and simplicity.
+
+</p>
+
+<ul>
+
+<li>✔ Fast Searching</li>
+
+<li>✔ Secure Login</li>
+
+<li>✔ Responsive Design</li>
+
+<li>✔ Easy Book Tracking</li>
+
+<li>✔ Reports</li>
+
+<li>✔ Notifications</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section id="how">
+
+<h2>
+
+How It Works
+
+</h2>
+
+<div class="steps">
+
+<div class="step">
+
+<div class="number">1</div>
+
+<h3>
+
+Register
+
+</h3>
+
+<p>
+
+Create your account.
+
+</p>
+
+</div>
+
+<div class="step">
+
+<div class="number">2</div>
+
+<h3>
+
+Login
+
+</h3>
+
+<p>
+
+Access dashboard.
+
+</p>
+
+</div>
+
+<div class="step">
+
+<div class="number">3</div>
+
+<h3>
+
+Borrow Books
+
+</h3>
+
+<p>
+
+Request books online.
+
+</p>
+
+</div>
+
+<div class="step">
+
+<div class="number">4</div>
+
+<h3>
+
+Return Books
+
+</h3>
+
+<p>
+
+Return books before due date.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= STATISTICS ================= -->
+
+<section id="stats">
+
+<div class="stat-box">
+
+<h2 class="counter" data-target="5000">0</h2>
+
+<p>Books</p>
+
+</div>
+
+<div class="stat-box">
+
+<h2 class="counter" data-target="3000">0</h2>
+
+<p>Students</p>
+
+</div>
+
+<div class="stat-box">
+
+<h2 class="counter" data-target="1200">0</h2>
+
+<p>Borrowed</p>
+
+</div>
+
+<div class="stat-box">
+
+<h2 class="counter" data-target="99">0</h2>
+
+<p>% Uptime</p>
+
+</div>
+
+</section>
+
+<!-- ================= CALL TO ACTION ================= -->
+
+<section class="cta">
+
+<h2>
+
+Ready to Experience Smart Library Management?
+
+</h2>
+
+<p>
+
+Join DEVSPHERE LMS today.
+
+</p>
+
+<button onclick="location.href='register.html'">
+
+Create Account
+
+</button>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+<h2>
+
+Contact Us
+
+</h2>
+
+<div class="contact-container">
+
+<div>
+
+<i class="fas fa-phone"></i>
+
++256 789 958 889
+
+</div>
+
+<div>
+
+<i class="fas fa-envelope"></i>
+
+devsphere@gmail.com
+
+</div>
+
+<div>
+
+<i class="fas fa-location-dot"></i>
+
+UICT, Nakawa
+
+</div>
+
+</div>
+
+ <section class="team-section">
+  <div class="container">
+    <h2 class="section-title">Our Leadership & Software Engineers</h2>
+    
+    <div class="team-grid">
+      <!-- Member Card -->
+
+      <div class="team-card">
+        <div class="member-img-wrapper">
+          <img src="khuzaifah.jpeg" alt="Portrait of Mr. Aine Mbabazi Khuzifah, Project Manager" loading="lazy">
+        </div>
+        <h3>Mr. Aine Mbabazi Khuzaifah</h3>
+        <p class="role">Team Leader</p>
+        
+      </div>
+
+      <!--member 2--->
+      <div class="team-card">
+        <div class="member-img-wrapper">
+          <img src="lms.jpg" alt="Portrait of Mr. Ssentongo Jordan, (Not available)" loading="lazy">
+        </div>
+        <h3>Mr. Ssentongo Jordan</h3>
+        <p class="role">Deployment Engineer</p>
+        
+      </div>
+
+      <!--member 3-->
+      <div class="team-card">
+        <div class="member-img-wrapper">
+          <img src="lms.jpg" alt="Portrait of Mrs. Nabagesera Aidah, Secretary" loading="lazy">
+        </div>
+        <h3>Mrs. Nabagesera Aidah</h3>
+        <p class="role">Secretary</p>
+        
+      </div>
+      <!---member 4-->
+      <div class="team-card">
+        <div class="member-img-wrapper">
+          <img src="lms.jpg" alt="Portrait of Ms. Mary Johnson, (Not available)" loading="lazy">
+        </div>
+        <h3>Mrs. NAMIIRO MILLY PRISCILLA.</h3>
+        <p class="role">UI/UX developer</p>
+        
+      </div>
+
+
+      <!--member 6--->
+      <div class="team-card">
+        <div class="member-img-wrapper">
+          <img src="lms.jpg" alt="Portrait of Mr. Nkeramihigo JB Owen, (Not available)" loading="lazy">
+        </div>
+        <h3>Mr. Nkeramihigo JB Owen</h3>
+        <p class="role">Software Engineer</p>
+        
+      </div>
+
+       
+      <!---member 4-->
+      <div class="team-card">
+        <div class="member-img-wrapper">
+          <img src="lms.jpg" alt="Portrait of Mr. Ssemuddu Richard, (Not available)" loading="lazy">
+        </div>
+        <h3>Mr. Ssemuddu Richard</h3>
+        <p class="role">Software Engineer</p>
+        
+      </div>
+
+
+      <!--member 6--->
+      <div class="team-card">
+        <div class="member-img-wrapper">
+          <img src="lms.jpg" alt="Portrait of Mr. Mukasa Mark, (Not available)" loading="lazy">
+        </div>
+        <h3>Mr. Mukasa Mark</h3>
+        <p class="role">Software Engineer</p>
+        
+      </div>
+
+       
+    </div>    
+
+     
+        
+      </div>
+
+  </section>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="footer-content">
+
+<div>
+
+<h3>
+
+DEVSPHERE LMS
+
+</h3>
+
+<p>
+
+Smart Library Management Solution
+
+</p>
+
+</div>
+
+<div>
+
+<h4>
+
+Quick Links
+
+</h4>
+
+<a href="#">Home</a>
+<a href="#">Features</a>
+<a href="#">Login</a>
+
+</div>
+
+<div>
+
+<h4>
+
+Follow Us
+
+</h4>
+
+
+<i class="fab fa-linkedin"></i>
+
+</div>
+
+</div>
+
+<p class="copyright">
+
+© 2026 DEVSPHERE.
+All Rights Reserved.
+
+</p>
+
+</footer>
+
+<!-- Scroll Top -->
+
+<button id="scrollTop">
+
+<i class="fas fa-arrow-up"></i>
+
+</button>
+
+<script src="landingpage.js"></script>
+
+</body>
+</html>
