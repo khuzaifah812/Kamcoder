@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="600" height="340" aria-label="Library Management System project thumbnail">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d0d1a"/>
+      <stop offset="100%" stop-color="#1a1000"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="340" fill="url(#bg3)"/>
+  <pattern id="g3" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(245,158,11,0.05)" stroke-width="1"/>
+  </pattern>
+  <rect width="600" height="340" fill="url(#g3)"/>
+  <circle cx="120" cy="100" r="180" fill="rgba(245,158,11,0.05)"/>
+  <circle cx="520" cy="260" r="150" fill="rgba(240,200,50,0.04)"/>
+
+  <!-- Terminal/CLI window -->
+  <rect x="60" y="45" width="480" height="255" rx="10" fill="rgba(10,10,16,0.97)" stroke="rgba(245,158,11,0.25)" stroke-width="1.5"/>
+  <!-- Terminal title bar -->
+  <rect x="60" y="45" width="480" height="32" rx="10" fill="rgba(245,158,11,0.1)"/>
+  <rect x="60" y="64" width="480" height="13" fill="rgba(245,158,11,0.1)"/>
+  <circle cx="82"  cy="61" r="5" fill="#ff5f57"/>
+  <circle cx="98"  cy="61" r="5" fill="#febc2e"/>
+  <circle cx="114" cy="61" r="5" fill="#28c840"/>
+  <text x="300" y="66" font-family="'JetBrains Mono','Courier New',monospace" font-size="10" font-weight="600" fill="rgba(255,255,255,0.6)" text-anchor="middle">library_system.py — Python Terminal</text>
+
+  <!-- Terminal output -->
+  <text x="80" y="100" font-family="'JetBrains Mono','Courier New',monospace" font-size="9.5" fill="rgba(245,158,11,0.9)">$ python library_system.py</text>
+  <text x="80" y="118" font-family="'JetBrains Mono','Courier New',monospace" font-size="9" fill="rgba(255,255,255,0.5)">==============================</text>
+  <text x="80" y="133" font-family="'JetBrains Mono','Courier New',monospace" font-size="9" fill="rgba(255,255,255,0.8)">  LIBRARY MANAGEMENT SYSTEM</text>
+  <text x="80" y="148" font-family="'JetBrains Mono','Courier New',monospace" font-size="9" fill="rgba(255,255,255,0.5)">==============================</text>
+  <text x="80" y="163" font-family="'JetBrains Mono','Courier New',monospace" font-size="9" fill="rgba(255,255,255,0.6)">1. Borrow Book</text>
+  <text x="80" y="177" font-family="'JetBrains Mono','Courier New',monospace" font-size="9" fill="rgba(255,255,255,0.6)">2. Return Book</text>
+  <text x="80" y="191" font-family="'JetBrains Mono','Courier New',monospace" font-size="9" fill="rgba(255,255,255,0.6)">3. View Available Books</text>
+  <text x="80" y="205" font-family="'JetBrains Mono','Courier New',monospace" font-size="9" fill="rgba(255,255,255,0.6)">4. Check Fines</text>
+  <text x="80" y="219" font-family="'JetBrains Mono','Courier New',monospace" font-size="9" fill="rgba(255,255,255,0.6)">5. Exit</text>
+  <text x="80" y="237" font-family="'JetBrains Mono','Courier New',monospace" font-size="9" fill="rgba(245,158,11,0.9)">Enter choice: <tspan fill="white">2</tspan></text>
+  <text x="80" y="252" font-family="'JetBrains Mono','Courier New',monospace" font-size="9" fill="rgba(0,212,170,0.9)">✓ Book returned: "Clean Code" by Robert C. Martin</text>
+  <text x="80" y="267" font-family="'JetBrains Mono','Courier New',monospace" font-size="9" fill="rgba(0,212,170,0.7)">  Fine: UGX 0  |  Returned on time.</text>
+  <text x="80" y="284" font-family="'JetBrains Mono','Courier New',monospace" font-size="9" fill="rgba(245,158,11,0.6)">▌</text>
+
+  <!-- Tech strip -->
+  <rect x="60" y="308" width="480" height="2" fill="rgba(245,158,11,0.4)"/>
+  <text x="300" y="326" font-family="'Inter','Segoe UI',sans-serif" font-size="10" font-weight="600" fill="rgba(255,255,255,0.45)" text-anchor="middle" letter-spacing="3">PYTHON · SQL · FILE HANDLING</text>
+</svg>

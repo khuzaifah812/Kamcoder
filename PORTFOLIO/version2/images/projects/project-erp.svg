@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="600" height="340" aria-label="School Management ERP System project thumbnail">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1520"/>
+      <stop offset="100%" stop-color="#0a1028"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="340" fill="url(#bg4)"/>
+  <pattern id="g4" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,150,255,0.05)" stroke-width="1"/>
+  </pattern>
+  <rect width="600" height="340" fill="url(#g4)"/>
+  <circle cx="100" cy="80" r="200" fill="rgba(0,130,255,0.05)"/>
+  <circle cx="520" cy="280" r="160" fill="rgba(100,80,255,0.05)"/>
+
+  <!-- App window -->
+  <rect x="55" y="45" width="490" height="250" rx="12" fill="rgba(15,22,36,0.97)" stroke="rgba(59,130,246,0.2)" stroke-width="1.5"/>
+  <rect x="55" y="45" width="490" height="36" rx="12" fill="rgba(59,130,246,0.1)"/>
+  <rect x="55" y="69" width="490" height="12" fill="rgba(59,130,246,0.1)"/>
+  <circle cx="78"  cy="63" r="5" fill="#ff5f57"/>
+  <circle cx="94"  cy="63" r="5" fill="#febc2e"/>
+  <circle cx="110" cy="63" r="5" fill="#28c840"/>
+  <text x="300" y="68" font-family="'Inter','Segoe UI',sans-serif" font-size="11" font-weight="600" fill="rgba(255,255,255,0.7)" text-anchor="middle">School ERP — Administration Panel</text>
+
+  <!-- Top module nav -->
+  <rect x="65" y="90" width="470" height="28" rx="6" fill="rgba(59,130,246,0.06)"/>
+  <text x="100" y="108" font-family="'Inter','Segoe UI',sans-serif" font-size="8.5" fill="rgba(255,255,255,0.8)" font-weight="600">Students</text>
+  <text x="165" y="108" font-family="'Inter','Segoe UI',sans-serif" font-size="8.5" fill="rgba(255,255,255,0.5)">Attendance</text>
+  <text x="240" y="108" font-family="'Inter','Segoe UI',sans-serif" font-size="8.5" fill="rgba(255,255,255,0.5)">Fees</text>
+  <text x="285" y="108" font-family="'Inter','Segoe UI',sans-serif" font-size="8.5" fill="rgba(255,255,255,0.5)">Timetable</text>
+  <text x="355" y="108" font-family="'Inter','Segoe UI',sans-serif" font-size="8.5" fill="rgba(255,255,255,0.5)">Reports</text>
+  <text x="415" y="108" font-family="'Inter','Segoe UI',sans-serif" font-size="8.5" fill="rgba(255,255,255,0.5)">Admin</text>
+  <rect x="78" y="112" width="44" height="2" rx="1" fill="rgba(59,130,246,0.9)"/>
+
+  <!-- Stat cards row -->
+  <rect x="65" y="128" width="110" height="58" rx="8" fill="rgba(59,130,246,0.1)" stroke="rgba(59,130,246,0.2)" stroke-width="1"/>
+  <text x="120" y="146" font-family="'Inter','Segoe UI',sans-serif" font-size="8" fill="rgba(255,255,255,0.5)" text-anchor="middle">Enrolled</text>
+  <text x="120" y="170" font-family="'Inter','Segoe UI',sans-serif" font-size="22" font-weight="800" fill="#3b82f6" text-anchor="middle">1,240</text>
+
+  <rect x="185" y="128" width="110" height="58" rx="8" fill="rgba(0,212,170,0.08)" stroke="rgba(0,212,170,0.2)" stroke-width="1"/>
+  <text x="240" y="146" font-family="'Inter','Segoe UI',sans-serif" font-size="8" fill="rgba(255,255,255,0.5)" text-anchor="middle">Fees Collected</text>
+  <text x="240" y="170" font-family="'Inter','Segoe UI',sans-serif" font-size="18" font-weight="800" fill="#00d4aa" text-anchor="middle">86%</text>
+
+  <rect x="305" y="128" width="110" height="58" rx="8" fill="rgba(108,99,255,0.1)" stroke="rgba(108,99,255,0.2)" stroke-width="1"/>
+  <text x="360" y="146" font-family="'Inter','Segoe UI',sans-serif" font-size="8" fill="rgba(255,255,255,0.5)" text-anchor="middle">Staff Members</text>
+  <text x="360" y="170" font-family="'Inter','Segoe UI',sans-serif" font-size="22" font-weight="800" fill="#6c63ff" text-anchor="middle">48</text>
+
+  <rect x="425" y="128" width="110" height="58" rx="8" fill="rgba(245,158,11,0.08)" stroke="rgba(245,158,11,0.2)" stroke-width="1"/>
+  <text x="480" y="146" font-family="'Inter','Segoe UI',sans-serif" font-size="8" fill="rgba(255,255,255,0.5)" text-anchor="middle">Classes</text>
+  <text x="480" y="170" font-family="'Inter','Segoe UI',sans-serif" font-size="22" font-weight="800" fill="#f59e0b" text-anchor="middle">24</text>
+
+  <!-- Module cards -->
+  <rect x="65" y="196" width="145" height="88" rx="8" fill="rgba(59,130,246,0.08)" stroke="rgba(59,130,246,0.15)" stroke-width="1"/>
+  <text x="90" y="220" font-family="'Inter','Segoe UI',sans-serif" font-size="18">📋</text>
+  <text x="115" y="222" font-family="'Inter','Segoe UI',sans-serif" font-size="9" font-weight="700" fill="rgba(255,255,255,0.8)">Registration</text>
+  <text x="90" y="240" font-family="'Inter','Segoe UI',sans-serif" font-size="7.5" fill="rgba(255,255,255,0.4)">Student enrollment &amp;</text>
+  <text x="90" y="252" font-family="'Inter','Segoe UI',sans-serif" font-size="7.5" fill="rgba(255,255,255,0.4)">record management</text>
+  <rect x="80" y="264" width="60" height="14" rx="4" fill="rgba(59,130,246,0.2)"/>
+  <text x="110" y="274" font-family="'Inter','Segoe UI',sans-serif" font-size="7" fill="#3b82f6" text-anchor="middle">Manage →</text>
+
+  <rect x="220" y="196" width="145" height="88" rx="8" fill="rgba(0,212,170,0.06)" stroke="rgba(0,212,170,0.15)" stroke-width="1"/>
+  <text x="245" y="220" font-family="'Inter','Segoe UI',sans-serif" font-size="18">💰</text>
+  <text x="270" y="222" font-family="'Inter','Segoe UI',sans-serif" font-size="9" font-weight="700" fill="rgba(255,255,255,0.8)">Fees Module</text>
+  <text x="245" y="240" font-family="'Inter','Segoe UI',sans-serif" font-size="7.5" fill="rgba(255,255,255,0.4)">Payment tracking &amp;</text>
+  <text x="245" y="252" font-family="'Inter','Segoe UI',sans-serif" font-size="7.5" fill="rgba(255,255,255,0.4)">balance management</text>
+  <rect x="235" y="264" width="60" height="14" rx="4" fill="rgba(0,212,170,0.15)"/>
+  <text x="265" y="274" font-family="'Inter','Segoe UI',sans-serif" font-size="7" fill="#00d4aa" text-anchor="middle">Manage →</text>
+
+  <rect x="375" y="196" width="145" height="88" rx="8" fill="rgba(108,99,255,0.08)" stroke="rgba(108,99,255,0.15)" stroke-width="1"/>
+  <text x="400" y="220" font-family="'Inter','Segoe UI',sans-serif" font-size="18">📊</text>
+  <text x="425" y="222" font-family="'Inter','Segoe UI',sans-serif" font-size="9" font-weight="700" fill="rgba(255,255,255,0.8)">Reports</text>
+  <text x="400" y="240" font-family="'Inter','Segoe UI',sans-serif" font-size="7.5" fill="rgba(255,255,255,0.4)">Academic &amp; admin</text>
+  <text x="400" y="252" font-family="'Inter','Segoe UI',sans-serif" font-size="7.5" fill="rgba(255,255,255,0.4)">analytics dashboard</text>
+  <rect x="390" y="264" width="60" height="14" rx="4" fill="rgba(108,99,255,0.2)"/>
+  <text x="420" y="274" font-family="'Inter','Segoe UI',sans-serif" font-size="7" fill="#6c63ff" text-anchor="middle">View →</text>
+
+  <!-- Tech strip -->
+  <rect x="55" y="303" width="490" height="2" fill="rgba(59,130,246,0.4)"/>
+  <text x="300" y="322" font-family="'Inter','Segoe UI',sans-serif" font-size="10" font-weight="600" fill="rgba(255,255,255,0.45)" text-anchor="middle" letter-spacing="3">PYTHON · DJANGO · MYSQL · HTML/CSS/JS</text>
+</svg>

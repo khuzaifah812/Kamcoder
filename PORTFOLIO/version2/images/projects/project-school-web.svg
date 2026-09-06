@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="600" height="340" aria-label="School Website Projects thumbnail">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d0d14"/>
+      <stop offset="100%" stop-color="#1a0d2e"/>
+    </linearGradient>
+    <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6c63ff"/>
+      <stop offset="100%" stop-color="#00d4aa"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="340" fill="url(#bg5)"/>
+  <pattern id="g5" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(108,99,255,0.04)" stroke-width="1"/>
+  </pattern>
+  <rect width="600" height="340" fill="url(#g5)"/>
+
+  <!-- Browser window -->
+  <rect x="55" y="40" width="490" height="265" rx="12" fill="rgba(15,15,24,0.98)" stroke="rgba(108,99,255,0.2)" stroke-width="1.5"/>
+  <!-- Browser chrome -->
+  <rect x="55" y="40" width="490" height="36" rx="12" fill="rgba(25,25,40,0.9)"/>
+  <rect x="55" y="64" width="490" height="12" fill="rgba(25,25,40,0.9)"/>
+  <circle cx="78"  cy="58" r="5" fill="#ff5f57"/>
+  <circle cx="94"  cy="58" r="5" fill="#febc2e"/>
+  <circle cx="110" cy="58" r="5" fill="#28c840"/>
+  <!-- URL bar -->
+  <rect x="130" y="50" width="280" height="16" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="270" y="62" font-family="'Inter','Segoe UI',sans-serif" font-size="8" fill="rgba(255,255,255,0.4)" text-anchor="middle">🔒 school-website.example.com</text>
+
+  <!-- School website nav bar -->
+  <rect x="55" y="76" width="490" height="32" fill="rgba(30,30,50,0.95)"/>
+  <text x="90" y="96" font-family="'Inter','Segoe UI',sans-serif" font-size="10" font-weight="800" fill="white">🏫 UICT School</text>
+  <text x="245" y="96" font-family="'Inter','Segoe UI',sans-serif" font-size="8.5" fill="rgba(255,255,255,0.7)">Home</text>
+  <text x="290" y="96" font-family="'Inter','Segoe UI',sans-serif" font-size="8.5" fill="rgba(255,255,255,0.7)">About</text>
+  <text x="335" y="96" font-family="'Inter','Segoe UI',sans-serif" font-size="8.5" fill="rgba(255,255,255,0.7)">Programs</text>
+  <text x="390" y="96" font-family="'Inter','Segoe UI',sans-serif" font-size="8.5" fill="rgba(255,255,255,0.7)">Admissions</text>
+  <text x="455" y="96" font-family="'Inter','Segoe UI',sans-serif" font-size="8.5" fill="rgba(255,255,255,0.7)">Contact</text>
+
+  <!-- Hero section of school site -->
+  <rect x="55" y="108" width="490" height="100" fill="url(#heroGrad)" opacity="0.15"/>
+  <rect x="55" y="108" width="490" height="100" fill="rgba(0,0,0,0.4)"/>
+  <!-- Hero content -->
+  <text x="300" y="138" font-family="'Inter','Segoe UI',sans-serif" font-size="10" font-weight="600" fill="rgba(255,255,255,0.6)" text-anchor="middle" letter-spacing="2">WELCOME TO</text>
+  <text x="300" y="160" font-family="'Inter','Segoe UI',sans-serif" font-size="18" font-weight="800" fill="white" text-anchor="middle">Uganda Institute of ICT</text>
+  <text x="300" y="178" font-family="'Inter','Segoe UI',sans-serif" font-size="9" fill="rgba(255,255,255,0.6)" text-anchor="middle">Empowering students through technology and innovation</text>
+  <rect x="240" y="186" width="64" height="16" rx="8" fill="rgba(108,99,255,0.8)"/>
+  <text x="272" y="197" font-family="'Inter','Segoe UI',sans-serif" font-size="8" font-weight="600" fill="white" text-anchor="middle">Apply Now</text>
+  <rect x="312" y="186" width="64" height="16" rx="8" fill="transparent" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+  <text x="344" y="197" font-family="'Inter','Segoe UI',sans-serif" font-size="8" fill="rgba(255,255,255,0.7)" text-anchor="middle">Learn More</text>
+
+  <!-- Info cards row -->
+  <rect x="65" y="218" width="148" height="70" rx="8" fill="rgba(108,99,255,0.08)" stroke="rgba(108,99,255,0.15)" stroke-width="1"/>
+  <text x="139" y="243" font-family="'Inter','Segoe UI',sans-serif" font-size="16" text-anchor="middle">📚</text>
+  <text x="139" y="262" font-family="'Inter','Segoe UI',sans-serif" font-size="9" font-weight="700" fill="rgba(255,255,255,0.8)" text-anchor="middle">Programs</text>
+  <text x="139" y="277" font-family="'Inter','Segoe UI',sans-serif" font-size="7.5" fill="rgba(255,255,255,0.4)" text-anchor="middle">Diploma &amp; Certificate courses</text>
+
+  <rect x="226" y="218" width="148" height="70" rx="8" fill="rgba(0,212,170,0.06)" stroke="rgba(0,212,170,0.15)" stroke-width="1"/>
+  <text x="300" y="243" font-family="'Inter','Segoe UI',sans-serif" font-size="16" text-anchor="middle">🎓</text>
+  <text x="300" y="262" font-family="'Inter','Segoe UI',sans-serif" font-size="9" font-weight="700" fill="rgba(255,255,255,0.8)" text-anchor="middle">Admissions</text>
+  <text x="300" y="277" font-family="'Inter','Segoe UI',sans-serif" font-size="7.5" fill="rgba(255,255,255,0.4)" text-anchor="middle">Apply for 2025/2026</text>
+
+  <rect x="387" y="218" width="148" height="70" rx="8" fill="rgba(245,158,11,0.06)" stroke="rgba(245,158,11,0.15)" stroke-width="1"/>
+  <text x="461" y="243" font-family="'Inter','Segoe UI',sans-serif" font-size="16" text-anchor="middle">📞</text>
+  <text x="461" y="262" font-family="'Inter','Segoe UI',sans-serif" font-size="9" font-weight="700" fill="rgba(255,255,255,0.8)" text-anchor="middle">Contact</text>
+  <text x="461" y="277" font-family="'Inter','Segoe UI',sans-serif" font-size="7.5" fill="rgba(255,255,255,0.4)" text-anchor="middle">Get in touch with us</text>
+
+  <!-- Responsive badge -->
+  <rect x="430" y="42" width="100" height="18" rx="9" fill="rgba(0,212,170,0.15)" stroke="rgba(0,212,170,0.3)" stroke-width="1"/>
+  <text x="480" y="54" font-family="'Inter','Segoe UI',sans-serif" font-size="7.5" font-weight="600" fill="#00d4aa" text-anchor="middle">📱 Responsive</text>
+
+  <!-- Tech strip -->
+  <rect x="55" y="313" width="490" height="2" fill="rgba(108,99,255,0.4)"/>
+  <text x="300" y="330" font-family="'Inter','Segoe UI',sans-serif" font-size="10" font-weight="600" fill="rgba(255,255,255,0.45)" text-anchor="middle" letter-spacing="3">HTML5 · CSS3 · JAVASCRIPT</text>
+</svg>

@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="600" height="340" aria-label="Student Attendance Management System project thumbnail">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d0d14"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6c63ff"/>
+      <stop offset="100%" stop-color="#4d45d4"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="340" fill="url(#bg)"/>
+
+  <!-- Grid pattern -->
+  <pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(108,99,255,0.05)" stroke-width="1"/>
+  </pattern>
+  <rect width="600" height="340" fill="url(#g)"/>
+
+  <!-- Glow circles -->
+  <circle cx="100" cy="80" r="180" fill="rgba(108,99,255,0.07)"/>
+  <circle cx="500" cy="280" r="140" fill="rgba(77,69,212,0.07)"/>
+
+  <!-- Mock browser / app UI -->
+  <!-- App window -->
+  <rect x="60" y="50" width="480" height="240" rx="12" fill="rgba(30,30,48,0.9)" stroke="rgba(108,99,255,0.25)" stroke-width="1.5"/>
+  <!-- Window title bar -->
+  <rect x="60" y="50" width="480" height="36" rx="12" fill="rgba(108,99,255,0.15)"/>
+  <rect x="60" y="74" width="480" height="12" fill="rgba(108,99,255,0.15)"/>
+  <!-- Traffic lights -->
+  <circle cx="84"  cy="68" r="5" fill="#ff5f57"/>
+  <circle cx="100" cy="68" r="5" fill="#febc2e"/>
+  <circle cx="116" cy="68" r="5" fill="#28c840"/>
+  <!-- Title bar text -->
+  <text x="300" y="73" font-family="'Inter','Segoe UI',sans-serif" font-size="11" font-weight="600" fill="rgba(255,255,255,0.7)" text-anchor="middle">Student Attendance Management System</text>
+
+  <!-- Sidebar -->
+  <rect x="60" y="86" width="120" height="204" fill="rgba(18,18,32,0.8)"/>
+  <!-- Sidebar items -->
+  <rect x="72" y="100" width="96" height="24" rx="6" fill="rgba(108,99,255,0.3)"/>
+  <text x="120" y="116" font-family="'Inter','Segoe UI',sans-serif" font-size="9" fill="rgba(255,255,255,0.9)" text-anchor="middle" font-weight="600">Dashboard</text>
+  <rect x="72" y="130" width="96" height="22" rx="4" fill="transparent"/>
+  <text x="120" y="145" font-family="'Inter','Segoe UI',sans-serif" font-size="9" fill="rgba(255,255,255,0.5)" text-anchor="middle">Students</text>
+  <rect x="72" y="156" width="96" height="22" rx="4" fill="transparent"/>
+  <text x="120" y="171" font-family="'Inter','Segoe UI',sans-serif" font-size="9" fill="rgba(255,255,255,0.5)" text-anchor="middle">Attendance</text>
+  <rect x="72" y="182" width="96" height="22" rx="4" fill="transparent"/>
+  <text x="120" y="197" font-family="'Inter','Segoe UI',sans-serif" font-size="9" fill="rgba(255,255,255,0.5)" text-anchor="middle">Reports</text>
+  <rect x="72" y="208" width="96" height="22" rx="4" fill="transparent"/>
+  <text x="120" y="223" font-family="'Inter','Segoe UI',sans-serif" font-size="9" fill="rgba(255,255,255,0.5)" text-anchor="middle">Settings</text>
+
+  <!-- Main content area -->
+  <!-- Stats row -->
+  <rect x="192" y="100" width="88" height="56" rx="8" fill="rgba(108,99,255,0.12)" stroke="rgba(108,99,255,0.2)" stroke-width="1"/>
+  <text x="236" y="120" font-family="'Inter','Segoe UI',sans-serif" font-size="9" fill="rgba(255,255,255,0.5)" text-anchor="middle">Total Students</text>
+  <text x="236" y="142" font-family="'Inter','Segoe UI',sans-serif" font-size="20" font-weight="800" fill="#6c63ff" text-anchor="middle">342</text>
+
+  <rect x="290" y="100" width="88" height="56" rx="8" fill="rgba(0,212,170,0.08)" stroke="rgba(0,212,170,0.2)" stroke-width="1"/>
+  <text x="334" y="120" font-family="'Inter','Segoe UI',sans-serif" font-size="9" fill="rgba(255,255,255,0.5)" text-anchor="middle">Present Today</text>
+  <text x="334" y="142" font-family="'Inter','Segoe UI',sans-serif" font-size="20" font-weight="800" fill="#00d4aa" text-anchor="middle">289</text>
+
+  <rect x="388" y="100" width="88" height="56" rx="8" fill="rgba(239,68,68,0.08)" stroke="rgba(239,68,68,0.2)" stroke-width="1"/>
+  <text x="432" y="120" font-family="'Inter','Segoe UI',sans-serif" font-size="9" fill="rgba(255,255,255,0.5)" text-anchor="middle">Absent Today</text>
+  <text x="432" y="142" font-family="'Inter','Segoe UI',sans-serif" font-size="20" font-weight="800" fill="#ef4444" text-anchor="middle">53</text>
+
+  <!-- Attendance table header -->
+  <rect x="192" y="168" width="284" height="24" rx="4" fill="rgba(108,99,255,0.15)"/>
+  <text x="210" y="183" font-family="'Inter','Segoe UI',sans-serif" font-size="8" font-weight="700" fill="rgba(255,255,255,0.7)">REG NO</text>
+  <text x="285" y="183" font-family="'Inter','Segoe UI',sans-serif" font-size="8" font-weight="700" fill="rgba(255,255,255,0.7)">STUDENT NAME</text>
+  <text x="415" y="183" font-family="'Inter','Segoe UI',sans-serif" font-size="8" font-weight="700" fill="rgba(255,255,255,0.7)">STATUS</text>
+
+  <!-- Table rows -->
+  <rect x="192" y="194" width="284" height="20" rx="2" fill="rgba(255,255,255,0.02)"/>
+  <text x="210" y="207" font-family="'Inter','Segoe UI',sans-serif" font-size="8" fill="rgba(255,255,255,0.5)">2024/SE/001</text>
+  <text x="285" y="207" font-family="'Inter','Segoe UI',sans-serif" font-size="8" fill="rgba(255,255,255,0.7)">Alice Nakamya</text>
+  <rect x="415" y="197" width="40" height="14" rx="7" fill="rgba(0,212,170,0.15)"/>
+  <text x="435" y="207" font-family="'Inter','Segoe UI',sans-serif" font-size="7" fill="#00d4aa" text-anchor="middle">Present</text>
+
+  <rect x="192" y="215" width="284" height="20" rx="2" fill="rgba(255,255,255,0.02)"/>
+  <text x="210" y="228" font-family="'Inter','Segoe UI',sans-serif" font-size="8" fill="rgba(255,255,255,0.5)">2024/SE/002</text>
+  <text x="285" y="228" font-family="'Inter','Segoe UI',sans-serif" font-size="8" fill="rgba(255,255,255,0.7)">Brian Ochieng</text>
+  <rect x="415" y="218" width="40" height="14" rx="7" fill="rgba(239,68,68,0.15)"/>
+  <text x="435" y="228" font-family="'Inter','Segoe UI',sans-serif" font-size="7" fill="#ef4444" text-anchor="middle">Absent</text>
+
+  <rect x="192" y="236" width="284" height="20" rx="2" fill="rgba(255,255,255,0.02)"/>
+  <text x="210" y="249" font-family="'Inter','Segoe UI',sans-serif" font-size="8" fill="rgba(255,255,255,0.5)">2024/SE/003</text>
+  <text x="285" y="249" font-family="'Inter','Segoe UI',sans-serif" font-size="8" fill="rgba(255,255,255,0.7)">Carol Abishai</text>
+  <rect x="415" y="239" width="40" height="14" rx="7" fill="rgba(0,212,170,0.15)"/>
+  <text x="435" y="249" font-family="'Inter','Segoe UI',sans-serif" font-size="7" fill="#00d4aa" text-anchor="middle">Present</text>
+
+  <!-- Tech stack strip -->
+  <rect x="60" y="300" width="480" height="32" rx="0" fill="rgba(108,99,255,0.08)" stroke="rgba(108,99,255,0.15)" stroke-width="0"/>
+  <rect x="60" y="300" width="480" height="2" fill="rgba(108,99,255,0.3)"/>
+  <text x="300" y="320" font-family="'Inter','Segoe UI',sans-serif" font-size="10" font-weight="600" fill="rgba(255,255,255,0.45)" text-anchor="middle" letter-spacing="3">PYTHON · DJANGO · MYSQL · DOCKER · HTML/CSS/JS</text>
+</svg>

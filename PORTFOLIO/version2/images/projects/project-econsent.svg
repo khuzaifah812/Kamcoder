@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="600" height="340" aria-label="E-Consent and Student Verification System project thumbnail">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1a14"/>
+      <stop offset="100%" stop-color="#111f1a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="340" fill="url(#bg2)"/>
+  <pattern id="g2" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,212,170,0.05)" stroke-width="1"/>
+  </pattern>
+  <rect width="600" height="340" fill="url(#g2)"/>
+  <circle cx="150" cy="120" r="200" fill="rgba(0,212,170,0.05)"/>
+  <circle cx="500" cy="250" r="160" fill="rgba(0,184,150,0.05)"/>
+
+  <!-- App window -->
+  <rect x="60" y="50" width="480" height="240" rx="12" fill="rgba(20,32,28,0.95)" stroke="rgba(0,212,170,0.2)" stroke-width="1.5"/>
+  <rect x="60" y="50" width="480" height="36" rx="12" fill="rgba(0,212,170,0.12)"/>
+  <rect x="60" y="74" width="480" height="12" fill="rgba(0,212,170,0.12)"/>
+  <circle cx="84"  cy="68" r="5" fill="#ff5f57"/>
+  <circle cx="100" cy="68" r="5" fill="#febc2e"/>
+  <circle cx="116" cy="68" r="5" fill="#28c840"/>
+  <text x="300" y="73" font-family="'Inter','Segoe UI',sans-serif" font-size="11" font-weight="600" fill="rgba(255,255,255,0.7)" text-anchor="middle">E-Consent &amp; Student Verification System</text>
+
+  <!-- Left panel — form -->
+  <rect x="70" y="96" width="220" height="184" rx="6" fill="rgba(0,0,0,0.2)"/>
+  <text x="180" y="116" font-family="'Inter','Segoe UI',sans-serif" font-size="10" font-weight="700" fill="rgba(255,255,255,0.8)" text-anchor="middle">Submit Consent Form</text>
+
+  <!-- Form fields -->
+  <rect x="82" y="124" width="196" height="20" rx="4" fill="rgba(255,255,255,0.05)" stroke="rgba(0,212,170,0.2)" stroke-width="1"/>
+  <text x="92" y="137" font-family="'Inter','Segoe UI',sans-serif" font-size="8" fill="rgba(255,255,255,0.4)">Student Name</text>
+
+  <rect x="82" y="150" width="196" height="20" rx="4" fill="rgba(255,255,255,0.05)" stroke="rgba(0,212,170,0.2)" stroke-width="1"/>
+  <text x="92" y="163" font-family="'Inter','Segoe UI',sans-serif" font-size="8" fill="rgba(255,255,255,0.4)">Registration Number</text>
+
+  <rect x="82" y="176" width="196" height="20" rx="4" fill="rgba(0,212,170,0.08)" stroke="rgba(0,212,170,0.35)" stroke-width="1"/>
+  <text x="92" y="189" font-family="'Inter','Segoe UI',sans-serif" font-size="8" fill="rgba(0,212,170,0.9)">Payment Reference: UG-2024-8821</text>
+
+  <!-- File upload area -->
+  <rect x="82" y="202" width="196" height="40" rx="6" fill="rgba(0,212,170,0.04)" stroke="rgba(0,212,170,0.15)" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="180" y="218" font-family="'Inter','Segoe UI',sans-serif" font-size="8" fill="rgba(0,212,170,0.6)" text-anchor="middle">📎 Upload Supporting Documents</text>
+  <text x="180" y="232" font-family="'Inter','Segoe UI',sans-serif" font-size="7" fill="rgba(255,255,255,0.3)" text-anchor="middle">PDF, JPG, PNG accepted</text>
+
+  <!-- Submit button -->
+  <rect x="82" y="250" width="196" height="24" rx="6" fill="rgba(0,212,170,0.7)"/>
+  <text x="180" y="265" font-family="'Inter','Segoe UI',sans-serif" font-size="9" font-weight="700" fill="white" text-anchor="middle">Submit Application</text>
+
+  <!-- Right panel — verification status -->
+  <rect x="302" y="96" width="228" height="184" rx="6" fill="rgba(0,0,0,0.2)"/>
+  <text x="416" y="116" font-family="'Inter','Segoe UI',sans-serif" font-size="10" font-weight="700" fill="rgba(255,255,255,0.8)" text-anchor="middle">Verification Dashboard</text>
+
+  <!-- Status items -->
+  <rect x="314" y="125" width="204" height="28" rx="6" fill="rgba(0,212,170,0.1)" stroke="rgba(0,212,170,0.2)" stroke-width="1"/>
+  <circle cx="328" cy="139" r="5" fill="#00d4aa"/>
+  <text x="340" y="143" font-family="'Inter','Segoe UI',sans-serif" font-size="8" fill="rgba(255,255,255,0.8)">Alice N. — Documents Verified ✓</text>
+
+  <rect x="314" y="158" width="204" height="28" rx="6" fill="rgba(245,158,11,0.1)" stroke="rgba(245,158,11,0.2)" stroke-width="1"/>
+  <circle cx="328" cy="172" r="5" fill="#f59e0b"/>
+  <text x="340" y="176" font-family="'Inter','Segoe UI',sans-serif" font-size="8" fill="rgba(255,255,255,0.8)">Brian O. — Pending Review ⏳</text>
+
+  <rect x="314" y="191" width="204" height="28" rx="6" fill="rgba(0,212,170,0.1)" stroke="rgba(0,212,170,0.2)" stroke-width="1"/>
+  <circle cx="328" cy="205" r="5" fill="#00d4aa"/>
+  <text x="340" y="209" font-family="'Inter','Segoe UI',sans-serif" font-size="8" fill="rgba(255,255,255,0.8)">Carol A. — Payment Confirmed ✓</text>
+
+  <rect x="314" y="224" width="204" height="28" rx="6" fill="rgba(239,68,68,0.1)" stroke="rgba(239,68,68,0.2)" stroke-width="1"/>
+  <circle cx="328" cy="238" r="5" fill="#ef4444"/>
+  <text x="340" y="242" font-family="'Inter','Segoe UI',sans-serif" font-size="8" fill="rgba(255,255,255,0.8)">David K. — Documents Missing ✗</text>
+
+  <!-- Tech strip -->
+  <rect x="60" y="300" width="480" height="2" fill="rgba(0,212,170,0.35)"/>
+  <text x="300" y="320" font-family="'Inter','Segoe UI',sans-serif" font-size="10" font-weight="600" fill="rgba(255,255,255,0.45)" text-anchor="middle" letter-spacing="3">PYTHON · DJANGO · MYSQL · HTML/CSS/JS</text>
+</svg>
